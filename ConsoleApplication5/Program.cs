@@ -14,27 +14,33 @@ namespace ConsoleApplication5
             int counter = 1;
             bool con = true;
             Console.WriteLine("\nWelcome to the Grand Circus Casino! Roll the dice?(y/n):");
-            //------program loop------
-            while (con)
+            string beginning = Console.ReadLine();
+            if (beginning == "y")
             {
-                Console.WriteLine("\nHow many sides for the dice?");
-                int sides = int.Parse(Console.ReadLine());
-                Console.WriteLine(RollBoth(sides, counter));
-                //------Continue?--------
-                Console.WriteLine("\nAnother one? (y/n)");
-                string ans = Console.ReadLine();
-                Console.WriteLine("\n================================");
-                if (ans == "y")
+                //------program loop------
+                while (con)
                 {
-                    con = true;
-                    counter++;
-                }
-                else
-                {
-                    con = false;
-                    Console.WriteLine("WE MADE IT!!!");
+                    Console.WriteLine("\nHow many sides for the dice?");
+                    int sides = int.Parse(Console.ReadLine());
+                    Console.WriteLine(RollBoth(sides, counter));
+                    //------Continue?--------
+                    Console.WriteLine("\nAnother one? (y/n)");
+                    string ans = Console.ReadLine();
+                    Console.WriteLine("\n================================");
+                    if (ans == "y")
+                    {
+                        con = true;
+                        counter++;
+                    }
+                    else
+                    {
+                        con = false;
+                        Console.WriteLine("WE MADE IT!!!");
+                    }
                 }
             }
+            else
+            { Console.WriteLine("Come back when you aren't scared"); }
         }
         //-------Methods---------
         static string RollBoth(int sides, int counter)
