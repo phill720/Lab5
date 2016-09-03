@@ -19,10 +19,11 @@ namespace ConsoleApplication5
                 {
                     Console.Write("\nHow many sides for the dice?\t");
                     int sides = int.Parse(Console.ReadLine());
+                    Console.WriteLine();
                     Console.WriteLine(Rolls.RollBoth(sides, counter));
                     //------Continue?-------
                     Console.WriteLine("\nAnother one? (y/n)");
-                    string ans = Console.ReadLine();
+                    string ans = Console.ReadLine().ToLower();
                     Console.WriteLine("\n================================");
                     if (ans == "y")
                     {
