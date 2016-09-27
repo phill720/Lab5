@@ -11,7 +11,7 @@ namespace ConsoleApplication5
             int counter = 1;
             bool con = true;
             Console.WriteLine("\nWelcome to the Grand Circus Casino! Roll the dice?(y/n):");
-            string beginning = Console.ReadLine();
+            string beginning = Console.ReadLine().ToLower();
             if (beginning == "y")
             {
                 //------program loop------
@@ -36,7 +36,7 @@ namespace ConsoleApplication5
                         Console.WriteLine("WE MADE IT!!!");
                     }
                 }
-                //-----end while loop-----
+                //-----end while continue loop-----
             }
             else
             { Console.WriteLine( "Come back when you aren't scared" ); }
